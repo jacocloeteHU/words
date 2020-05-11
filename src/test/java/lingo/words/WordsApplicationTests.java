@@ -2,12 +2,13 @@ package lingo.words;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import lingo.words.factories.WordFactory;
-import lingo.words.filters.IFilter;
-import lingo.words.filters.WordFilter;
-import lingo.words.models.Word;
-import lingo.words.service.ControllersService;
-import lingo.words.service.WordService;
+
+import lingo.words.application.factories.WordFactory;
+import lingo.words.application.filters.IFilter;
+import lingo.words.application.filters.WordFilter;
+import lingo.words.application.services.ControllersService;
+import lingo.words.application.services.WordService;
+import lingo.words.domain.Word;
 
 //import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;

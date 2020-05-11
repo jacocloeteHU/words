@@ -1,1 +1,0 @@
-package lingo.words.factories;
