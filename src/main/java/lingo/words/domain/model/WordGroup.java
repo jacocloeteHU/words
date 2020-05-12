@@ -1,12 +1,4 @@
-<<<<<<< HEAD:src/main/java/lingo/words/domain/model/WordGroup.java
 package lingo.words.domain.model;
-=======
-<<<<<<< Updated upstream:src/main/java/lingo/words/models/WordGroup.java
-package lingo.words.models;
-=======
-package lingo.words.domain.model;
->>>>>>> Stashed changes:src/main/java/lingo/words/models/model/WordGroup.java
->>>>>>> 8eb390a4fe2d2e4d518769b38fd64c4f3b8162fd:src/main/java/lingo/words/models/WordGroup.java
 
 import java.util.ArrayList;
 

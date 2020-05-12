@@ -2,17 +2,6 @@ package lingo.words;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-import lingo.words.factories.WordFactory;
-import lingo.words.filters.IFilter;
-import lingo.words.filters.WordFilter;
-import lingo.words.models.Word;
-import lingo.words.service.ControllersService;
-import lingo.words.service.WordService;
-=======
->>>>>>> 8eb390a4fe2d2e4d518769b38fd64c4f3b8162fd
 
 import lingo.words.application.factories.WordFactory;
 import lingo.words.application.filters.IFilter;
@@ -20,10 +9,6 @@ import lingo.words.application.filters.WordFilter;
 import lingo.words.application.services.WordService;
 import lingo.words.domain.model.Word;
 import lingo.words.domain.services.DomainServices;
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> 8eb390a4fe2d2e4d518769b38fd64c4f3b8162fd
 
 //import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
