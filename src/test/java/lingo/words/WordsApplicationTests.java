@@ -2,12 +2,22 @@ package lingo.words;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+<<<<<<< Updated upstream
 import lingo.words.factories.WordFactory;
 import lingo.words.filters.IFilter;
 import lingo.words.filters.WordFilter;
 import lingo.words.models.Word;
 import lingo.words.service.ControllersService;
 import lingo.words.service.WordService;
+=======
+
+import lingo.words.application.factories.WordFactory;
+import lingo.words.application.filters.IFilter;
+import lingo.words.application.filters.WordFilter;
+import lingo.words.application.services.WordService;
+import lingo.words.domain.model.Word;
+import lingo.words.domain.services.DomainServices;
+>>>>>>> Stashed changes
 
 //import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -63,8 +73,8 @@ class WordsApplicationTests {
 		words.add(new Word(5, "pinda"));
 		words.add(new Word(5, "choco"));
 		words.add(new Word(5, "alade"));
-		ControllersService.GetWordController().Clear();
-		ControllersService.GetWordController().AddList(words);
+		DomainServices.WordService().Clear();
+		DomainServices.WordService().AddList(words);
 		assertEquals(3 ,WordService.GetWords().size());
 	}
 	

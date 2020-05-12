@@ -2,9 +2,15 @@ package lingo.words.factories;
 
 import java.util.ArrayList;
 
+<<<<<<< Updated upstream:src/main/java/lingo/words/factories/WordFactory.java
 import lingo.words.filters.IFilter;
 import lingo.words.filters.WordFilter;
 import lingo.words.models.Word;
+=======
+import lingo.words.application.filters.IFilter;
+import lingo.words.application.filters.WordFilter;
+import lingo.words.domain.model.Word;
+>>>>>>> Stashed changes:src/main/java/lingo/words/application/factories/WordFactory.java
 
 public class WordFactory {
 	// creates the word object
