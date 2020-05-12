@@ -1,11 +1,3 @@
-<<<<<<< HEAD:src/main/java/lingo/words/domain/services/WordService.java
-package lingo.words.domain.services;
-
-import java.util.ArrayList;
-
-import lingo.words.domain.model.Word;
-
-=======
 <<<<<<< Updated upstream:src/main/java/lingo/words/controllers/WordController.java
 package lingo.words.controllers;
 
@@ -20,7 +12,6 @@ import java.util.ArrayList;
 import lingo.words.domain.model.Word;
 >>>>>>> Stashed changes:src/main/java/lingo/words/models/services/WordService.java
 
->>>>>>> 8eb390a4fe2d2e4d518769b38fd64c4f3b8162fd:src/main/java/lingo/words/controllers/WordController.java
 public class WordService implements IWordService {
 	private ArrayList<Word> WordList; 
 	
