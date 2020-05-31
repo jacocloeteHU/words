@@ -13,14 +13,9 @@ repositories {
 }
 
 dependencies {
-<<<<<<< Updated upstream
-   	compile("org.springframework.boot:spring-boot-starter-web")
-	compile 'org.apache.maven.plugins:maven-surefire-plugin:2.21.0'
-=======
    	compile('org.springframework.boot:spring-boot-starter-web')
 	compile 'org.apache.maven.plugins:maven-surefire-plugin:2.21.0'
 
->>>>>>> Stashed changes
 	implementation 'org.springframework.boot:spring-boot-starter-jersey'
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
