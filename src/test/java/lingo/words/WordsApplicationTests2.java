@@ -8,7 +8,7 @@ public class WordsApplicationTests2 {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+	
 	}
 
 }
