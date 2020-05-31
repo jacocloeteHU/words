@@ -1,21 +1,16 @@
 plugins {
+	id 'java'
+	id 'maven-publish'
 	id 'org.springframework.boot' version '2.2.6.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
-	id 'maven-publish'
-	id 'java'
 }
 
-group = 'lingo'
-version = '0.0.1-SNAPSHOT'
+group 'com.lingo'
+version '1.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 repositories {
 	mavenCentral()
-}
-
-//create a single Jar with all dependencies
-bootJar {
-	mainClassName = 'linga.words.WordsApplication'
 }
 
 publishing {
@@ -24,17 +19,24 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/jacocloeteHU/words")
             credentials {
-                username = System.getenv("USERNAME")
-                password = System.getenv("TOKEN")
+                username = project.findProperty("gpr.user") ?: System.getProperty("USERNAME")
+                password = project.findProperty("gpr.password") ?: System.getProperty("PASSWORD")
             }
         }
     }
     publications {
         gpr(MavenPublication) {
-            from(components.java)
+            artifact bootJar
         }
     }
 }
+
+//create a single Jar with all dependencies
+bootJar {
+	mainClassName = 'linga.words.WordsApplication'
+}
+
+
 
 dependencies {
  	compile('org.springframework.boot:spring-boot-starter-web')
