@@ -5,6 +5,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 
+import lingo.words.domain.model.IFileWordSource;
 import lingo.words.infrastructure.serialization.IWordDeserializer;
 import lingo.words.infrastructure.serialization.SerlializationBuilder;
 
@@ -31,7 +32,7 @@ public class FileWordSource implements IFileWordSource {
 		this.fileName = fileName;
 	}
 
-	public ArrayList<String> ReadWordsFromFile() throws IOException {
+	public ArrayList<String> ReadWords() throws IOException {
 		String data = ReadFileAsString();
 		return this.serializer.Deserialize(data);
 	}
