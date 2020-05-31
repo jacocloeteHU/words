@@ -15,7 +15,7 @@ repositories {
 
 //create a single Jar with all dependencies
 bootJar {
-	mainClassName = 'Axton.t3.main.Application'
+	mainClassName = 'linga.words.WordsApplication'
 }
 
 publishing {
