@@ -13,6 +13,11 @@ repositories {
 	mavenCentral()
 }
 
+//create a single Jar with all dependencies
+bootJar {
+	mainClassName = 'linga.words.WordsApplication'
+}
+
 publishing {
     repositories {
         maven {
