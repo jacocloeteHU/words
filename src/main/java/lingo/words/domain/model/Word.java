@@ -4,10 +4,10 @@ public class Word {
 	private int Length;
 	private String Word;
 	
-	public Word(int length, String content) {
+	public Word(int length, String word) {
 		super();
 		Length = length;
-		Word = content;
+		Word = word;
 	}
 
 	public int getLength() {

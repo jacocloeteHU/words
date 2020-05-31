@@ -3,7 +3,6 @@ package lingo.words.domain.services;
 import java.util.ArrayList;
 
 import lingo.words.domain.model.Word;
-
 public interface IWordService {
 	public ArrayList<Word> GetAll();
 	
