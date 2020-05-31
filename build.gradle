@@ -1,6 +1,7 @@
 plugins {
 	id 'org.springframework.boot' version '2.2.6.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
+	id 'maven-publish'
 	id 'java'
 }
 
@@ -13,7 +14,7 @@ repositories {
 }
 
 dependencies {
-  compile('org.springframework.boot:spring-boot-starter-web')
+ 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile 'org.apache.maven.plugins:maven-surefire-plugin:2.21.0'
 
 	implementation 'org.springframework.boot:spring-boot-starter-jersey'
