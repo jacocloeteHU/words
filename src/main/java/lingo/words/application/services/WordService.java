@@ -3,17 +3,17 @@ package lingo.words.application.services;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import lingo.words.domain.model.IFileWordSource;
 import lingo.words.domain.model.Word;
 import lingo.words.domain.services.DomainServices;
 import lingo.words.application.factories.WordFactory;
 import lingo.words.infrastructure.source.FileWordSource;
-import lingo.words.infrastructure.source.IFileWordSource;
 
 public class WordService {
 	
 	public static boolean LoadWordsFromSource(String path, String fileName, String fileType) throws IOException {
 		IFileWordSource fileSource = new FileWordSource(path, fileName, fileType);
-		ArrayList<String> words = fileSource.ReadWordsFromFile();
+		ArrayList<String> words = fileSource.ReadWords();
 		return CreateWords(words);
 	}
 

@@ -20,4 +20,6 @@ public class WordController {
     public ResponseEntity<ArrayList<Word>> readdevice(){    	
     	return ResponseEntity.ok(WordService.GetWords());
     } 
+    
+    
 }
