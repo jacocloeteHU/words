@@ -4,18 +4,14 @@ public class Word {
 	private int Length;
 	private String Word;
 	
-	public Word(int length, String word) {
+	public Word(String word) {
 		super();
-		Length = length;
+		Length = word.length();
 		Word = word;
 	}
 
 	public int getLength() {
 		return Length;
-	}
-
-	public void setLength(int length) {
-		Length = length;
 	}
 
 	public String getWord() {
@@ -24,6 +20,7 @@ public class Word {
 
 	public void setWord(String content) {
 		Word = content;
+		Length = content.length();
 	}
 
 	@Override
