@@ -3,14 +3,12 @@ package lingo.words;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
-import lingo.words.application.factories.WordFactory;
 import lingo.words.application.filters.IFilter;
 import lingo.words.application.filters.WordFilter;
 import lingo.words.application.services.WordService;
 import lingo.words.domain.model.Word;
 import lingo.words.domain.services.DomainServices;
 
-import static org.junit.Assert.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -86,15 +84,8 @@ public class WordsApplicationTests {
 		DomainServices.WordService().AddList(words);
 		assertEquals(3 ,WordService.GetWords().size());
 	}
-	
-	@Test
-	@DisplayName("WordFactory List Creation Test")
-	public void WordFactoryTest() {
-		ArrayList<Word> wWords = WordFactory.CreateWordList(GetWordString());
-		assertEquals(3, wWords.size());
-	}
-	
-	private ArrayList<String> GetWordString() { 
+
+	private ArrayList<String> GetWordString() {
 		ArrayList<String> sWords =  new ArrayList<String>();
 		sWords.add("banaan");
 		sWords.add("appel");
