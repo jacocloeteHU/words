@@ -1,6 +1,6 @@
 package lingo.words;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import lingo.words.application.factories.WordFactory;
@@ -15,12 +15,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class WordsApplicationTests {
 
 	@Test
-	public void contextLoads() {
+	public void contextLoads() throws IOException {
+		WordService.LoadWordsFromSource("C:/Users/jacoc/Documents/GitHub/words/src/main/resources/", "words", ".csv");
 	}
 	
 	@Test
@@ -29,10 +31,26 @@ public class WordsApplicationTests {
 	}
 	
 	@Test
-	public void testDivide() {
-	    assertThrows(ArithmeticException.class, () -> {
-	        Integer.divideUnsigned(42, 0);
-	    });
+	@DisplayName("Testing Word object")
+	public void CreateWord() {
+	    Word word = new Word("testen");
+		lengthWord(word);
+		lengthWordmanipulation(word);
+	}
+
+	@DisplayName("Testing Word length and size")
+	public void lengthWord(Word word) {
+		assertEquals(6 ,word.getLength());
+		assertEquals(6 ,word.getWord().length());
+		//Word word = new Word("testen");
+	}
+
+	@DisplayName("Testing Word length/size after manipulation")
+	public void lengthWordmanipulation(Word word) {
+		word.setWord("testenen");
+		assertEquals(8 ,word.getLength());
+		assertEquals(8 ,word.getWord().length());
+		//Word word = new Word("testen");
 	}
 	
 	@Test
@@ -58,9 +76,9 @@ public class WordsApplicationTests {
 	@DisplayName("WordsController Addlist Test")
 	public void WordsController() {
 		ArrayList<Word> words = new ArrayList<Word>();
-		words.add(new Word(5, "pinda"));
-		words.add(new Word(5, "choco"));
-		words.add(new Word(5, "alade"));
+		words.add(new Word( "pinda"));
+		words.add(new Word( "choco"));
+		words.add(new Word("alade"));
 		DomainServices.WordService().Clear();
 		DomainServices.WordService().AddList(words);
 		assertEquals(3 ,WordService.GetWords().size());

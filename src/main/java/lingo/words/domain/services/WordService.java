@@ -23,13 +23,13 @@ public class WordService implements IWordService {
 		}*/
 	}
 	
-	public void Add(Word word) {
+	/*public void Add(Word word) {
 		this.WordList.add(word);
 	}
 	
 	public boolean Remove(Word word) {
 		return this.WordList.remove(word);
-	}
+	}*/
 	
 	public void Clear() {
 		WordList.clear();

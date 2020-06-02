@@ -9,7 +9,7 @@ import lingo.words.domain.model.Word;
 public class WordFactory {
 	// creates the word object
 	private static Word CreateWord(String wordString){
-		return new Word(wordString.length(), wordString);
+		return new Word(wordString);
 	}
 	
 	// creates word objects and return a word list

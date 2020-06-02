@@ -1,6 +1,6 @@
 package lingo.words;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 import lingo.words.application.factories.WordFactory;

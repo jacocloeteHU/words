@@ -65,9 +65,9 @@ public class LibraryTest {
 	@DisplayName("WordsController Addlist Test")
 	public void WordsController() {
 		ArrayList<Word> words = new ArrayList<Word>();
-		words.add(new Word(5, "pinda"));
-		words.add(new Word(5, "choco"));
-		words.add(new Word(5, "alade"));
+	//	words.add(new Word(5, "pinda"));
+		//	words.add(new Word(5, "choco"));
+	//	words.add(new Word(5, "alade"));
 		DomainServices.WordService().Clear();
 		DomainServices.WordService().AddList(words);
 		assertEquals(3 ,WordService.GetWords().size());
