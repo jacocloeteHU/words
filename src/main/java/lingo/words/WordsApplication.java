@@ -21,7 +21,8 @@ public class WordsApplication {
 	}
 	
 	private static void InitializeApplication() throws IOException {
-		WordService.LoadWordsFromSource("C:/Users/jacoc/Documents/GitHub/words/src/main/resources/", "words", ".csv");
+		WordService.LoadWordsFromSource( "words", ".csv");
+		//WordService.LoadWordsFromSource("C:/Users/jacoc/Documents/GitHub/words/src/main/resources/", "words", ".csv");
 		System.out.println("hier moet je eerste woord staan. " + WordService.GetWords().get(0).getWord());
 	}
 
