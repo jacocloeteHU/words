@@ -1,5 +1,7 @@
 package lingo.words;
 
+import lingo.words.application.factories.WordFactory;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
@@ -53,7 +55,14 @@ public class WordsApplicationTests {
 		assertEquals(8 ,word.getWord().length());
 		//Word word = new Word("testen");
 	}
-	
+
+	@Test
+	@DisplayName("WordFactory List Creation Test")
+	public void WordFactoryTest() {
+		ArrayList<Word> wWords = WordFactory.CreateWordList(GetWordString());
+		Assertions.assertEquals(3, wWords.size());
+	}
+
 	@Test
 	@DisplayName("Filter Set Test")
 	public void FilterLengthTest() {
