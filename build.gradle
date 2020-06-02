@@ -33,7 +33,7 @@ publishing {
 
 //create a single Jar with all dependencies
 bootJar {
-	mainClassName = 'linga.words.WordsApplication'
+	mainClassName = 'lingo.words.WordsApplication'
 }
 
 
