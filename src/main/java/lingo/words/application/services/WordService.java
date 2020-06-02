@@ -1,6 +1,7 @@
 package lingo.words.application.services;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.ArrayList;
 
 import lingo.words.WordsApplication;
@@ -13,7 +14,7 @@ import lingo.words.infrastructure.source.FileWordSource;
 import java.io.File;
 public class WordService {
 	
-	public static boolean LoadWordsFromSource(String fileName, String fileType) throws IOException {
+	public static boolean LoadWordsFromSource(String fileName, String fileType) throws IOException, URISyntaxException {
 		IFileWordSource fileSource = new FileWordSource(fileName, fileType);
 		ArrayList<String> words = fileSource.ReadWords();
 		return CreateWords(words);
