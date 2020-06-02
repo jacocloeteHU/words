@@ -22,7 +22,8 @@ public class WordsApplicationTests {
 
 	@Test
 	public void contextLoads() throws IOException {
-		WordService.LoadWordsFromSource("C:/Users/jacoc/Documents/GitHub/words/src/main/resources/", "words", ".csv");
+		WordService.LoadWordsFromSource( "words", ".csv");
+		//WordService.LoadWordsFromSource("C:/Users/jacoc/Documents/GitHub/words/src/main/resources/", "words", ".csv");
 		assertEquals(42, Integer.sum(19, 23));
 	}
 	
