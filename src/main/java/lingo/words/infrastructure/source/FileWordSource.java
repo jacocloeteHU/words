@@ -1,19 +1,14 @@
 package lingo.words.infrastructure.source;
 
 import java.io.*;
-import java.net.URI;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
-import lingo.words.WordsApplication;
-import lingo.words.domain.model.IFileWordSource;
+import lingo.words.domain.model.IWordSource;
 import lingo.words.infrastructure.serialization.IWordDeserializer;
 import lingo.words.infrastructure.serialization.SerlializationBuilder;
 
-public class FileWordSource implements IFileWordSource {
+public class FileWordSource implements IWordSource {
 	
 	private IWordDeserializer serializer;
 	private String path;
