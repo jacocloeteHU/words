@@ -23,13 +23,13 @@ public class FileWordSource implements IWordSource {
 		this.fileType = fileType;
 	}
 
-	public FileWordSource(IWordDeserializer serializer, String fileName, String fileType) {
+/*	public FileWordSource(IWordDeserializer serializer, String fileName, String fileType) {
 		super();
 		this.fileType = fileType;
 		this.serializer = serializer;
 		this.path = path;
 		this.fileName = fileName;
-	}
+	}*/
 
 	public ArrayList<String> ReadWords() throws IOException, URISyntaxException {
 		String data = ReadFileAsString();
