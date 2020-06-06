@@ -32,4 +32,9 @@ public class WordController {
     public ResponseEntity<Word> GetRandomWordByLength(@PathVariable int length){
         return ResponseEntity.ok(WordService.GetWordByLength(length));
     }
+
+    @GetMapping("/word/check/{word}")
+    public ResponseEntity<Boolean> GetRandomWord(@PathVariable String word){
+        return ResponseEntity.ok(WordService.CheckWord(word));
+    }
 }

@@ -33,6 +33,12 @@ public class WordService {
 		return wordsList.get(rand.nextInt(wordsList.size()));
 	}
 
+	public static Boolean CheckWord(String word) {
+		Word testWord = new Word(word);
+		ArrayList<Word> wordsList = DomainServices.WordService().GetAll();
+		return wordsList.contains(testWord);
+	}
+
 	public static Word GetWordByLength(int length) {
 		Random rand = new Random();
 		ArrayList<Word> wordsList = DomainServices.WordService().GetAll();
