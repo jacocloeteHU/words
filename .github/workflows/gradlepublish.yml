@@ -29,6 +29,11 @@ jobs:
 
     - name: Build with Gradle
       run: gradle build
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        SONAR_TOKEN: 58ce48e6e098f3dc832506c53405c9afe49a5cd3 
     
     - name: Generate coverage
       run: gradle jacocoTestReport
