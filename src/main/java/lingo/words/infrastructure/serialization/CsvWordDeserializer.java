@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class CsvWordDeserializer implements IWordDeserializer {
 
 	@Override
-	public ArrayList<String> Deserialize(String data) {
+	public ArrayList<String> deserialize(String data) {
 		ArrayList<String> wordsList = new ArrayList<String>();
 		Scanner scanner = new Scanner(data);
 		while (scanner.hasNextLine()) {

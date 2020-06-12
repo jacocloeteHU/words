@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 import lingo.words.domain.model.Word;
 public interface IWordService {
-	public ArrayList<Word> GetAll();
+	public ArrayList<Word> getAll();
 	
-	public void AddList(ArrayList<Word> words);
+	public void addList(ArrayList<Word> words);
 	
 //	public void Add(Word word);
 //
 //	public boolean Remove(Word word);
 
-	public void Clear();
+	public void clear();
 }

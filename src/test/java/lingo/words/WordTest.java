@@ -4,14 +4,19 @@ import lingo.words.domain.model.Word;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.runner.RunWith;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class WordTest {
     public WordTest() {
     }
 
     @Test
     @DisplayName("Testing Word object")
-    public void CreateWord() {
+    public void createWord() {
         Word word = new Word("testen");
         lengthWord(word);
         lengthWordmanipulation(word);

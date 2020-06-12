@@ -3,35 +3,26 @@ package lingo.words.domain.services;
 import java.util.ArrayList;
 
 import lingo.words.domain.model.Word;
+import org.springframework.stereotype.Service;
 
+@Service
 public class WordService implements IWordService {
-	private ArrayList<Word> WordList; 
+	private ArrayList<Word> wordList;
 	
 	public WordService() {
-		this.WordList = new ArrayList<Word>();
+		this.wordList = new ArrayList<Word>();
 	}
 	
-	public ArrayList<Word> GetAll(){
-		return this.WordList;
+	public ArrayList<Word> getAll(){
+		return this.wordList;
 	}
 	
-	public void AddList(ArrayList<Word> words) {
+	public void addList(ArrayList<Word> words) {
 		
-		this.WordList.addAll(words);
-/*		for(Word word : words) {
-			this.Add(word);
-		}*/
+		this.wordList.addAll(words);
 	}
-	
-	/*public void Add(Word word) {
-		this.WordList.add(word);
-	}
-	
-	public boolean Remove(Word word) {
-		return this.WordList.remove(word);
-	}*/
-	
-	public void Clear() {
-		WordList.clear();
+
+	public void clear() {
+		wordList.clear();
 	}
 }

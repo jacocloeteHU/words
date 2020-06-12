@@ -3,31 +3,31 @@ package lingo.words.domain.model;
 import java.util.Objects;
 
 public class Word {
-	private int Length;
-	private String Word;
+	private int length;
+	private String word;
 	
 	public Word(String word) {
 		super();
-		Length = word.length();
-		Word = word;
+		length = word.length();
+		this.word = word;
 	}
 
 	public int getLength() {
-		return Length;
+		return length;
 	}
 
 	public String getWord() {
-		return Word;
+		return word;
 	}
 
 	public void setWord(String content) {
-		Word = content;
-		Length = content.length();
+		word = content;
+		length = content.length();
 	}
 
 	@Override
 	public String toString() {
-		return "word [Length=" + Length + ", Word=" + Word + "]";
+		return "word [Length=" + length + ", Word=" + word + "]";
 	}
 
 	@Override
@@ -35,12 +35,12 @@ public class Word {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Word word = (Word) o;
-		return Length == word.Length &&
-				Objects.equals(Word, word.Word);
+		return length == word.length &&
+				Objects.equals(this.word, word.word);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(Length, Word);
+		return Objects.hash(length, word);
 	}
 }

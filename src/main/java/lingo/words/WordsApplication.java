@@ -3,28 +3,30 @@ package lingo.words;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+import lingo.words.application.services.IWordViewService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import lingo.words.application.services.WordService;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-public class WordsApplication {
-
+@EnableAutoConfiguration
+@ComponentScan
+public class WordsApplication implements CommandLineRunner {
+@Autowired
+IWordViewService wordService;
 	public static void main(String[] args) {
-		try {
-			InitializeApplication();
-		} catch (IOException | URISyntaxException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} 
+
 		SpringApplication.run(WordsApplication.class, args);
 	}
-	
-	private static void InitializeApplication() throws IOException, URISyntaxException {
-		WordService.LoadWordsFromSource( "words", ".csv");
+
+	@Override
+	public void run(String... args) throws IOException, URISyntaxException {
+		wordService.loadWordsFromSource( "words", ".csv");
 		//WordService.LoadWordsFromSource("C:/Users/jacoc/Documents/GitHub/words/src/main/resources/", "words", ".csv");
-		System.out.println("hier moet je eerste woord staan. " + WordService.GetWords().get(0).getWord());
+		System.out.println("hier moet je eerste woord staan. " + wordService.getWords().get(0).getWord());
 	}
 
 }
