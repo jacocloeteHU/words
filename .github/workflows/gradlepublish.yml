@@ -32,6 +32,8 @@ jobs:
     
     - name: Generate coverage
       run: gradle jacocoTestReport
+    - name: Generate sonarcloud
+      run: gradle sonarqube
       
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
