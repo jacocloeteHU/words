@@ -1,4 +1,4 @@
-package lingo.words.application.filters;
+package lingo.words.domain.model;
 
 
 public interface IFilter {

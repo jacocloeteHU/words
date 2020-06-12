@@ -1,5 +1,7 @@
 package lingo.words.application.filters;
 
+import lingo.words.domain.model.IFilter;
+
 public class WordFilter implements IFilter {
 
 	// checks if word is only writen in lowercase, size 5-7 and no special chars

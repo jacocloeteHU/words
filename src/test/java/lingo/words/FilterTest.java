@@ -1,6 +1,6 @@
 package lingo.words;
 
-import lingo.words.application.filters.IFilter;
+import lingo.words.domain.model.IFilter;
 import lingo.words.application.filters.WordFilter;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

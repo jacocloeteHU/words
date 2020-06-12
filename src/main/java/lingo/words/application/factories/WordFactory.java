@@ -2,7 +2,7 @@ package lingo.words.application.factories;
 
 import java.util.ArrayList;
 
-import lingo.words.application.filters.IFilter;
+import lingo.words.domain.model.IFilter;
 import lingo.words.application.filters.WordFilter;
 import lingo.words.domain.model.Word;
 import org.springframework.stereotype.Component;
