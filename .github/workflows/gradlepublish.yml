@@ -29,11 +29,6 @@ jobs:
 
     - name: Build with Gradle
       run: gradle build
-    - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: 58ce48e6e098f3dc832506c53405c9afe49a5cd3 
     
     - name: Generate coverage
       run: gradle jacocoTestReport
@@ -46,11 +41,15 @@ jobs:
         flags: unittests
         name: codecov-umbrella
         fail_ci_if_error: true
+        
+    - name: SonarCloud Scan
+      uses: gradle sonarqube  
 
-    # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
-    # the publishing section of your build.gradle
+      # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
+      # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
       run: gradle publish
       env:
-        USERNAME: ${{ github.actor }}
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DISTRIBUTION_NAME: "lingo-words"
+        DISTRIBUTION_URL: https://maven.pkg.github.com/${{ github.repository }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
