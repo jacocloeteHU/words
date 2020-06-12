@@ -45,10 +45,11 @@ jobs:
     - name: SonarCloud Scan
       uses: gradle sonarqube  
 
-    # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
-    # the publishing section of your build.gradle
+      # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
+      # the publishing section of your build.gradle
     - name: Publish to GitHub Packages
       run: gradle publish
       env:
-        USERNAME: ${{ github.actor }}
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DISTRIBUTION_NAME: "lingo-words"
+        DISTRIBUTION_URL: https://maven.pkg.github.com/${{ github.repository }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
