@@ -41,9 +41,6 @@ jobs:
         flags: unittests
         name: codecov-umbrella
         fail_ci_if_error: true
-        
-    - name: SonarCloud Scan
-      uses: gradle sonarqube  
 
       # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
       # the publishing section of your build.gradle
