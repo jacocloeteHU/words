@@ -2,6 +2,7 @@ package lingo.words.infrastructure.serialization;
 
 
 public class SerlializationBuilder {
+	// gives constructor back
 	public IWordDeserializer initializeSerializer(String fileType) {
 		switch(fileType) {
 		  case ".txt":
