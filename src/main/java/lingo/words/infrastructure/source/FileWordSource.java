@@ -9,16 +9,14 @@ import lingo.words.infrastructure.serialization.IWordDeserializer;
 import lingo.words.infrastructure.serialization.SerlializationBuilder;
 
 public class FileWordSource implements IWordSource {
-	
+
 	private IWordDeserializer serializer;
-	private String path;
 	private String fileName;
 	private String fileType;
 	
 	public FileWordSource(String fileName, String fileType) {
 		super();
-		this.serializer = new SerlializationBuilder().InitializeSerializer(fileType);
-		this.path = path;
+		this.serializer = new SerlializationBuilder().initializeSerializer(fileType);
 		this.fileName = fileName;
 		this.fileType = fileType;
 	}
@@ -31,12 +29,12 @@ public class FileWordSource implements IWordSource {
 		this.fileName = fileName;
 	}*/
 
-	public ArrayList<String> ReadWords() throws IOException, URISyntaxException {
-		String data = ReadFileAsString();
-		return this.serializer.Deserialize(data);
+	public ArrayList<String> readWords() throws IOException, URISyntaxException {
+		String data = readFileAsString();
+		return this.serializer.deserialize(data);
 	}
 	
-	private String ReadFileAsString() throws IOException, URISyntaxException {
+	private String readFileAsString() throws IOException, URISyntaxException {
 	/*	URI uri = ClassLoader.getSystemResource("lingo/words/").toURI();
 		String mainPath = Paths.get(uri).toString();
 		Path path = Paths.get(mainPath ,"Movie.class");*/

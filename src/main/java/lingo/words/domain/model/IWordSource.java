@@ -6,6 +6,6 @@ import java.util.ArrayList;
 
 public interface IWordSource {
 
-	public ArrayList<String> ReadWords() throws IOException, URISyntaxException;
+	public ArrayList<String> readWords() throws IOException, URISyntaxException;
 	
 }
