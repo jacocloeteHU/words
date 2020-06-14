@@ -34,9 +34,9 @@ public class Word {
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
-		Word word = (Word) o;
-		return length == word.length &&
-				Objects.equals(this.word, word.word);
+		Word word1 = (Word) o;
+		return length == word1.length &&
+				Objects.equals(word, word1.word);
 	}
 
 	@Override

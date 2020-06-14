@@ -1,4 +1,4 @@
-package lingo.words;
+package lingo.words.application.services;
 
 import lingo.words.application.services.IWordViewService;
 import lingo.words.domain.model.Word;
@@ -53,6 +53,13 @@ public class WordsServiceTest {
     @DisplayName("WordsController Add to list Test")
     public void wordsServiceWord() {
         Assertions.assertNotNull(WordViewService.getWord());
+    }
+
+    @Test
+    @DisplayName("WordsController check word Test")
+    public void wordsServiceCheckWord() {
+        WordViewService.createWords(getWordString());
+        Assertions.assertTrue(WordViewService.checkWord("appel"));
     }
 
     @Test

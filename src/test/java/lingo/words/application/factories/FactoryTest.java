@@ -1,6 +1,5 @@
-package lingo.words;
+package lingo.words.application.factories;
 
-import lingo.words.application.factories.WordFactory;
 import lingo.words.domain.model.Word;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

@@ -1,4 +1,4 @@
-package lingo.words;
+package lingo.words.application.filters;
 
 import lingo.words.domain.model.IFilter;
 import lingo.words.application.filters.WordFilter;
@@ -16,8 +16,8 @@ public class FilterTest {
     }
 
     @Test
-    @DisplayName("Filter Set Test")
-    public void filterLengthTest() {
+    @DisplayName("Filter word length Test")
+    public void filterWordLengthTest() {
         IFilter filter = new WordFilter();
         Assertions.assertEquals(true, filter.filter("banaan"));
         Assertions.assertEquals(false, filter.filter("banaanen"));

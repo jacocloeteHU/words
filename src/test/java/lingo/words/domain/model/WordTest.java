@@ -1,4 +1,4 @@
-package lingo.words;
+package lingo.words.domain.model;
 
 import lingo.words.domain.model.Word;
 import org.junit.jupiter.api.Assertions;
@@ -20,6 +20,7 @@ public class WordTest {
         Word word = new Word("testen");
         lengthWord(word);
         lengthWordmanipulation(word);
+        Word word2 = new Word("testen");
     }
 
     @DisplayName("Testing Word length and size")
