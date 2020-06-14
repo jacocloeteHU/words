@@ -21,6 +21,7 @@ public class WordTest {
         lengthWord(word);
         lengthWordmanipulation(word);
         Word word2 = new Word("testen");
+
     }
 
     @DisplayName("Testing Word length and size")

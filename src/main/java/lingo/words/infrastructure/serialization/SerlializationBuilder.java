@@ -1,5 +1,6 @@
 package lingo.words.infrastructure.serialization;
 
+
 public class SerlializationBuilder {
 	public IWordDeserializer initializeSerializer(String fileType) {
 		switch(fileType) {
