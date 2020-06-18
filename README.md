@@ -21,3 +21,5 @@ Jacoco is ook gebruikt voor het controleren van de codecov.<br/>
 Unit en integratie tests zitten in de tests folder. <br/>
 Springboot annotations zijn gebruikt voor depenency injection. <br/>
 Packages worden ook automatisch gebuild bij CI en CD.<br/>
+
+
